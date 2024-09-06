@@ -32,6 +32,37 @@ Node *BST::insert(Node *root, tm *newDate){
 	return root;
 }
 
+void BST::preorder(){
+	preorder(root);
+}
+void BST::preorder(Node *root){
+	if (root != nullptr)
+	{
+		char s[100];
+		strftime(s, sizeof(s), "%d-%m-%Y", root->getValue());
+		cout << string(s) << endl;
+
+		preorder(root->getLeft());
+		
+		preorder(root->getRight());
+	}
+}
+
+void BST::deleteTree(){
+	deleteTree(root);
+}
+void BST::deleteTree(Node* root){
+	if (root != nullptr)
+	{
+		deleteTree(root->getLeft());
+		deleteTree(root->getRight());
+
+		delete root->getValue();
+		delete root;
+	}
+}
+
+
 bool BST::parseDateString(string &date, tm *time)
 {
 	istringstream ss(date);
@@ -66,9 +97,6 @@ void BST::graph(Node *root, ofstream &content)
 {
 	if (root != nullptr)
 	{
-		ostringstream oss;
-
-
 		char s[100];
 		strftime(s, sizeof(s), "%d-%m-%Y", root->getValue());
 
@@ -87,4 +115,10 @@ void BST::graph(Node *root, ofstream &content)
 		this->graph(root->getLeft(), content);
 		this->graph(root->getRight(), content);
 	}
+}
+
+
+BST::~BST()
+{
+	deleteTree(this->root);
 }

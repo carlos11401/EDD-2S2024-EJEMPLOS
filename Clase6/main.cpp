@@ -17,5 +17,6 @@ int main()
 	tree.insert(&date);
 	
   tree.graph();
+	tree.preorder();
 	return 0;
 }
