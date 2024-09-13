@@ -1,0 +1,19 @@
+digraph G {
+Nodo0x294111b9c30[label = "50" xlabel=1]
+Nodo0x294111b9c30->Nodo0x294111b9bd0
+Nodo0x294111b9c30->Nodo0x294111b9b50
+Nodo0x294111b9bd0[label = "25" xlabel=-1]
+Nodo0x294111b9bd0->Nodo0x294111b9b10
+Nodo0x294111b9b10[label = "10" xlabel=0]
+Nodo0x294111b9b50[label = "100" xlabel=0]
+Nodo0x294111b9b50->Nodo0x294111b99f0
+Nodo0x294111b9b50->Nodo0x294111b9a10
+Nodo0x294111b99f0[label = "65" xlabel=0]
+Nodo0x294111b99f0->Nodo0x294111b9a70
+Nodo0x294111b99f0->Nodo0x294111b99d0
+Nodo0x294111b9a70[label = "60" xlabel=0]
+Nodo0x294111b99d0[label = "75" xlabel=0]
+Nodo0x294111b9a10[label = "200" xlabel=1]
+Nodo0x294111b9a10->Nodo0x294111b9b70
+Nodo0x294111b9b70[label = "300" xlabel=0]
+}
