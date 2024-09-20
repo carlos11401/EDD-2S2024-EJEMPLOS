@@ -1,0 +1,10 @@
+digraph G {
+node	[shape = record,height=.1];
+
+node0[label="<r0>|<c1> 20|<r1>"];
+node1[label="<r0>|<c1> 10|<r1>|<c2> 15|<r2>"];
+node2[label="<r0>|<c1> 30|<r1>|<c2> 40|<r2>"];
+
+"node0":r0 ->"node1"
+"node0":r1 -> "node2"
+}
